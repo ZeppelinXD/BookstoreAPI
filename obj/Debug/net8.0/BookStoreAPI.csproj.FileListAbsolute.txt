@@ -1,0 +1,6 @@
+C:\Users\Greencom\BookStoreAPI\obj\Debug\net8.0\BookStoreAPI.csproj.AssemblyReference.cache
+C:\Users\Greencom\BookStoreAPI\obj\Debug\net8.0\BookStoreAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Greencom\BookStoreAPI\obj\Debug\net8.0\BookStoreAPI.AssemblyInfoInputs.cache
+C:\Users\Greencom\BookStoreAPI\obj\Debug\net8.0\BookStoreAPI.AssemblyInfo.cs
+C:\Users\Greencom\BookStoreAPI\obj\Debug\net8.0\BookStoreAPI.csproj.CoreCompileInputs.cache
+C:\Users\Greencom\BookStoreAPI\obj\Debug\net8.0\BookStoreAPI.MvcApplicationPartsAssemblyInfo.cache
