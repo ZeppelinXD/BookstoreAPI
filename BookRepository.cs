@@ -27,12 +27,12 @@ namespace BookStoreAPI.Repository
             {
                 books.Add(new Book
                 {
-                    Id = reader.GetInt32("Id"), 
-                    Title = reader.GetString("Title"), 
-                    Author = reader.GetString("Author"),
-                    PublicationYear = reader.GetInt32("PublicationYear"), 
-                    ISBN = reader.GetString("ISBN"),
-                    InStock = reader.GetInt32("InStock") 
+                    Id = reader.GetInt32(reader.GetOrdinal("Id")), 
+                    Title = reader.GetString(reader.GetOrdinal("Title")), 
+                    Author = reader.GetString(reader.GetOrdinal("Author")),
+                    PublicationYear = reader.GetInt32(reader.GetOrdinal("PublicationYear")), 
+                    ISBN = reader.GetString(reader.GetOrdinal("ISBN")),
+                    InStock = reader.GetInt32(reader.GetOrdinal("InStock")) 
                 });
             }
 
@@ -54,12 +54,12 @@ namespace BookStoreAPI.Repository
             {
                 return new Book
                 {
-                    Id = reader.GetInt32("Id"), 
-                    Title = reader.GetString("Title"),
-                    Author = reader.GetString("Author"),
-                    PublicationYear = reader.GetInt32("PublicationYear"), 
-                    ISBN = reader.GetString("ISBN"),
-                    InStock = reader.GetInt32("InStock") 
+                    Id = reader.GetInt32(reader.GetOrdinal("Id")), 
+                    Title = reader.GetString(reader.GetOrdinal("Title")),
+                    Author = reader.GetString(reader.GetOrdinal("Author")),
+                    PublicationYear = reader.GetInt32(reader.GetOrdinal("PublicationYear")), 
+                    ISBN = reader.GetString(reader.GetOrdinal("ISBN")),
+                    InStock = reader.GetInt32(reader.GetOrdinal("InStock")) 
                 };
             }
 

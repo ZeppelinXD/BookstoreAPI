@@ -6,7 +6,7 @@ namespace BookStoreAPI.Controllers
     public static class BookController
     {
         public static void MapBookEndpoints(this WebApplication app)
-        {
+        {   //Henter alle bøker eller søk etter bok med ID
             app.MapGet("/books", async (BookRepository repo) => await repo.GetAllBooksAsync());
 
             app.MapGet("/books/{id}", async (int id, BookRepository repo) =>
@@ -14,13 +14,13 @@ namespace BookStoreAPI.Controllers
                 var book = await repo.GetBookByIdAsync(id);
                 return book is not null ? Results.Ok(book) : Results.NotFound();
             });
-
+            //Legger til ny bok
             app.MapPost("/books", async (Book book, BookRepository repo) =>
             {
                 await repo.AddBookAsync(book);
                 return Results.Created($"/books/{book.Id}", book);
             });
-
+            //Endrer allerede eksisterende bok
             app.MapPut("/books/{id}", async (int id, Book book, BookRepository repo) =>
             {
                 var existingBook = await repo.GetBookByIdAsync(id);
@@ -30,7 +30,7 @@ namespace BookStoreAPI.Controllers
                 await repo.UpdateBookAsync(id, book);
                 return Results.NoContent();
             });
-
+            //Sletter bok etter ID
             app.MapDelete("/books/{id}", async (int id, BookRepository repo) =>
             {
                 var book = await repo.GetBookByIdAsync(id);
